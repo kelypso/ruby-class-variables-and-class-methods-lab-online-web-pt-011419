@@ -32,10 +32,10 @@ class Song
       if count[genre] # check if genre is already in hash
         count[genre] += 1
       else # if it's a unique genre, set count to 1
-        genre_count[genre] = 1
+        count[genre] = 1
       end
     end
-    genre_count
+    count
   end
 
   def self.artist_count
