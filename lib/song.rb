@@ -27,20 +27,27 @@ class Song
   end
   
   def self.genre_count
-    # return a hash of genre => count
-    count = {}
+    genre_count = {}
     @@genres.each do |genre|
-      if count[genre] == true # checking if the genre already exists
-        count[genre] += 1 
-      else
-        count[genre] = 1 
+      if genre_count[genre] #if the genre is already in the hash
+        genre_count[genre] += 1
+      else #if it's a new genre
+        genre_count[genre] = 1
       end
     end
-    count
+    genre_count
   end
-  
+
   def self.artist_count
-    # return a hash of artist => count
+    artist_count = {}
+    @@artists.each do |artist|
+      if artist_count[artist] #if the artist is already in the hash
+        artist_count[artist] += 1
+      else
+        artist_count[artist] = 1
+      end
+    end
+    artist_count
   end
 end
 
