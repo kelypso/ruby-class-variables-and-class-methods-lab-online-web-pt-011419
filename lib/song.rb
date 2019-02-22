@@ -27,7 +27,6 @@ class Song
   end
   
   def self.genre_count
-    # return a hash of genre => count
     count = {}
     @@genres.each do |genre|
       if count[genre] # checking if the genre already exists
